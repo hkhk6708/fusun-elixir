@@ -1,0 +1,54 @@
+@import "../share/variable";
+
+body {
+    padding-top: 60px;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+label, .label {
+    font-family: sans-serif;
+}
+
+.pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done #page-wrapper, .pace-done .footer {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.navbar-fixed-top:not(.navbar-fixed-top-second) {
+    z-index: 2041;
+}
+
+.navbar-fixed-top:not(.navbar-fixed-top-second) .navbar-brand {
+    margin-bottom: 0;
+    height: 60px;
+    padding: 20px;
+}
+
+.navbar-fixed-top:not(.navbar-fixed-top-second) .navbar-brand > img {
+    height: 100%;
+}
+
+.navbar-fixed-top-second {
+    top: 60px;
+    background: #212121;
+    height: 30px;
+}
+
+.navbar-fixed-top-second .navbar > span {
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .navbar-fixed-top-second .navbar.navbar-brand {
+        white-space: nowrap;
+        overflow-x: auto;
+        display: block;
+        width: 100vw;
+    }
+}

@@ -1,0 +1,9 @@
+<script>
+	var _csrf_token = '<%= get_csrf_token() %>';
+	var _delete_file_label = '<%= gettext("Remove") %>';
+	var _upload_file_label = '<%= gettext("Upload") %>';
+	var _select_file_label = '<%= gettext("Select File") %>';
+	var _select_image_label = '<%= gettext("Select Image") %>';
+	var _select_video_label = '<%= gettext("Select Video") %>';
+</script>
+<script type="text/javascript" src="<%= static_path(@conn, "/js/app.js") %>"></script>

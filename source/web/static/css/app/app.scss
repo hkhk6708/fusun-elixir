@@ -1,0 +1,11 @@
+/* This file is for your main application css. */
+$icon-font-path: "/fonts/";
+@import "../share/variable";
+@import "bootstrap";
+@import "font-awesome.scss";
+@import "toastr.scss";
+@import "../share/colorpicker.scss";
+@import "../share/fileinput.scss";
+
+/* Phoenix flash messages */
+.alert:empty { display: none; }

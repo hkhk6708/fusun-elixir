@@ -1,0 +1,112 @@
+/* here START side-bar style  */
+.side-bar-custome{
+	box-shadow: 2px 2px 5px #888888;
+}
+.logo-china img{
+	width: 100%;
+}
+.side-bar-custom{
+	text-align: center;
+}
+.side-bar-custom li a{
+	margin-right: 0;
+	border: none;
+	background: #2F4050;
+	border-radius: 0px;
+}
+.side-bar-custom li a i{
+	padding-right: 25px;
+}
+.side-bar-custom>li.active>a, .side-bar-custom>li.active>a:focus, .side-bar-custom>li.active>a:hover{
+	background-color: #293846;
+	border: none;
+	border-left: 5px solid #19AA8D;
+}
+.copyright{
+	text-align: center;
+	padding: 61% 0 5% 0;
+	margin-top: 1px;
+	color: #fff;
+	background: #2F4050;
+}
+/* here END side-bar style */
+
+
+/* here START nav-bar style */
+
+.table-custom{
+	width: 100%;
+}
+.navbar-administrator-custom{
+	margin-bottom: 0;
+	background: #2F4050;
+}
+.navbar-administrator-custom span{
+	padding-right: 5px;
+	color: #fff;
+}
+.white-txt{
+	color: #fff !important;
+}
+/* .navbar-administrator-custom>li.active>a, .navbar-administrator-custom>li.active>a:focus, .navbar-administrator-custom>li.active>a:hover{
+	background-color: #293846 !important;
+} */
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+	background: #293846;
+}
+.navbar-administrator-custom .ul-navbar-custome>li>a:active{
+	background-color: #293846;
+}
+.navbar-administrator-custom .ul-navbar-custome>li>a:visited{
+	background-color: #293846;
+}
+.white-txt-focus{
+	color: #fff !important;
+}
+/* here END nav-bar style */
+
+/* here START brad-cramps style */
+.page-heading-custom h2{
+	margin: 10px 0;
+}
+/* here END brad-cramps style */
+
+
+/* here START tab-content style */
+.tab-content{
+	padding-top: 21px;
+	padding-bottom: 21px;
+}
+.vtab2-custome h2{
+	margin: 20px 0;
+	padding-right: 20px;
+	display: inline-block;
+	float: left;
+}
+.vtab2-custome button{
+	margin: 22px 0 20px 0;
+	font-size: 10px;
+	color: #fff;
+	padding: 5px 15px 10px 15px;
+	border: 1px solid #138994;
+	background: #37a8a6; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#37a8a6, #0b7483); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#37a8a6, #0b7483); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#37a8a6, #0b7483); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#37a8a6, #0b7483); /* Standard syntax */
+}
+.table-custom-2>tbody>tr>td{
+	padding: 20px 20px;
+}
+.table-custom-2>tbody>tr>th{
+	padding-top: 20px 20px;
+}
+
+@media (max-width: 600px){
+	.copyright-mobile {
+		text-align: center;
+		padding: 5% 0 5% 0;
+		color: #fff;
+		background: #2F4050;
+	}
+}

@@ -1,0 +1,92 @@
+ <!--#region CONTENT-->
+<div class="row">
+	<div class="col-lg-12">
+	    <div class="wrapper wrapper-content">
+	        <div class="ibox float-e-margins">
+	            <div class="ibox-title">
+	                <h5><%= gettext "Iventory Management" %></h5>
+	                <div class="ibox-tools">
+	                    <a class="collapse-link">
+	                        <i class="fa fa-chevron-up"></i>
+	                    </a>
+	                    <!--a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	                        <i class="fa fa-wrench"></i>
+	                    </a>
+	                    <ul class="dropdown-menu dropdown-user">
+	                        <li><a href="#">Config option 1</a>
+	                        </li>
+	                        <li><a href="#">Config option 2</a>
+	                        </li>
+	                    </ul>
+	                    <a class="close-link">
+	                        <i class="fa fa-times"></i>
+	                    </a-->
+	                </div>
+	            </div>
+	            
+	            <div class="ibox-content">
+					<%= form_for @product_changeset, admin_product_path(@conn, :create), ["class": ""], fn f -> %>
+						<div class="form-group txt-div">
+							<div class="col-sm-2 col-xs-10 ">
+								<div class="row m0">
+									<label class="control-label"> <%= gettext("Name") %></label>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-10">
+								<div class="row m0">
+									<%= text_input(f, :name, [class: "form-control mg-top", placeholder: (gettext "Name")]) %>
+									<%= error_tag(f, :name) %>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group txt-div">
+							<div class="col-sm-2 col-xs-10 ">
+								<div class="row m0">
+									<label class="control-label"> <%= gettext("Name") %></label>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-10">
+								<div class="row m0">
+									<%= text_input(f, :name, [class: "form-control mg-top", placeholder: (gettext "Name")]) %>
+									<%= error_tag(f, :name) %>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group txt-div">
+							<div class="col-sm-2 col-xs-10 ">
+								<div class="row m0">
+									<label class="control-label"> <%= gettext("Name") %></label>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-10">
+								<div class="row m0">
+									<%= text_input(f, :name, [class: "form-control mg-top", placeholder: (gettext "Name")]) %>
+									<%= error_tag(f, :name) %>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group txt-div">
+							<div class="btn-group pull-right">
+								<div class="col-xs-12 col-sm-12">
+									<div class="row m0">
+									<a class="btn btn-danger" href="#">
+									<i class="fa fa-times"></i> <%= gettext("Cancel") %>
+									</a>
+									<button class="btn btn-primary" type="submit">
+									<i class="fa fa-check-square-o"></i> <%= gettext("Save") %>
+									</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="clearfix"></div>
+					<% end %>
+				</div>
+	        </div>
+	    </div>
+	</div>  
+</div>

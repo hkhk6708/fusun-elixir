@@ -1,0 +1,52 @@
+<!-- register indicidual css here -->
+<link rel="stylesheet" type="text/css" href="/css/login.css">
+
+<div class="login-wrapper">
+  <div class="login-container">
+    <div class="logo-container">
+      <img style="width: 200px; height: 200px" src="/images/fusun_logo.png" />
+    </div>
+    <div class="body-container">
+
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+      <%= if get_flash(@conn, :login_error) do %>
+        <div class="">
+          <ul class="reg-form">
+            <li class="reg-error"><i class="fa fa-exclamation-circle"></i> <%= get_flash(@conn, :login_error) %></li>
+          </ul>
+        </div>
+      <% end %>
+
+      <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
+      <ul>
+        <li>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+            <%= text_input f, :username, placeholder: (gettext "Username or Email"), class: "form-control", "aria-describedby": "basic-addon1" %>
+          </div>
+        </li>
+        <li>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock"></i></span>
+            <%= password_input f, :password, placeholder: (gettext "Password"), class: "form-control ab-password", "aria-describedby": "basic-addon1" %>
+          </div>
+        </li>
+        <!--li class="remember">
+          <label>
+            <input type="checkbox">&nbsp;<%= gettext "Remember Me" %>
+          </label>
+        </li-->
+        <li class="btn-con">
+          <input type="submit" class="btn btn-warning" value="Sign In">
+        <!--/li>
+        <li class="create-account">
+          <a class="pull-left" href="#"><%= gettext "Create an account" %></a>
+          <a href="#"><%= gettext "Forgot Password" %></a>
+	     </li-->
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

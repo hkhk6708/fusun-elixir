@@ -1,0 +1,97 @@
+/* REGISTER
+   ========================================================================== */
+/* VARIANTS
+   ========================================================================== */
+h1 {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 18px;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 14px;
+  color: #777; }
+
+h4 {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #555;
+  line-height: 12px; }
+
+.clear-fix {
+  clear: both; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.align-left {
+  text-align: left; }
+
+.yellow {
+  color: #f7b91e; }
+
+.airboss-ic-wait {
+  font-size: 60px;
+  color: #f7b91e; }
+
+/* MIXIN
+   ========================================================================== */
+body, html {
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px auto;
+  -webkit-font-smoothing: antialiased; }
+
+.login-wrapper {
+  padding-top: 10vh; }
+  .login-wrapper .login-container {
+    position: relative;
+    margin-top: 5%;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 412px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0px auto; }
+    .login-wrapper .login-container .logo-container {
+      text-align: center;
+      padding-top: 30px; }
+    .login-wrapper .login-container .body-container {
+      padding: 10px 0px; }
+      .login-wrapper .login-container .body-container ul {
+        list-style: none;
+        padding-left: 0px; }
+        .login-wrapper .login-container .body-container ul li {
+          margin: 20px auto;
+          width: 340px; }
+        .login-wrapper .login-container .body-container ul .btn-con {
+          text-align: center; }
+          .login-wrapper .login-container .body-container ul .btn-con .login-btn {
+            background-image: url("../images/login-normal.png") !important;
+            background-color: transparent !important;
+            width: 140px;
+            height: 38px;
+            -webkit-appearance: none;
+            border-width: 0px; }
+            .login-wrapper .login-container .body-container ul .btn-con .login-btn:hover {
+              background-image: url("../images/login-hover.png") !important; }
+        .login-wrapper .login-container .body-container ul .create-account {
+          padding-top: 30px;
+          text-align: right; }
+          .login-wrapper .login-container .body-container ul .create-account a {
+            font-size: 12px;
+            font-weight: 500;
+            color: #555; }
+        .login-wrapper .login-container .body-container ul .remember label {
+          font-size: 12px;
+          color: #555; }
+
+/*# sourceMappingURL=login-screen.css.map */

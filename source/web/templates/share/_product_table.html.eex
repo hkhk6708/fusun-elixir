@@ -1,0 +1,126 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5><%= @title %></h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <!--a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="#">Config option 1</a>
+                </li>
+                <li><a href="#">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a-->
+        </div>
+    </div>
+    
+    <div class="ibox-content">
+	    <table class="table">
+	        <thead>
+	            <tr>
+	                <th>#</th>
+	                <th><%= gettext "Name" %></th>
+					<th><%= gettext "Spec" %></th>
+					<th><%= gettext "Inventory" %></th>
+					<th><%= gettext "Details" %></th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	        	<%= for product <- @products do %>
+	            <tr>
+	            	<td>
+	            		<%= product.id %>
+	            	</td>
+	                <td>
+						<%= product.name %>
+					</td>
+					<td>
+						<%= product.size %> R<%= product.radius %> <%= product.v_number %>
+					</td>
+					<td>
+						#
+					</td>
+					<td>
+						<a href="<%= admin_product_path(@conn, :management, product.id) %>" class="btn btn-primary"><%= gettext "Manage" %></a>
+						<a href="#" class="js-expand-detail-view btn btn-danger" data-id="<%= product.id %>"><%= gettext "Toggle" %></a>
+					</td>
+	            </tr>
+	            <tr style="display: none;" id="js-detail-view-<%= product.id %>" class="js-detail">
+				    <td colspan="13">
+				        <table class="table table-bordered">
+				            <tr>
+				                <td colspan="4" class="active center">
+				                    <b><%= gettext "Detail Info" %></b>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td>
+				                	<b><%= gettext "Name" %></b>
+				                </td>
+				                <td>
+				                	<%= product.name %>
+				                </td>
+				                <td>
+				                	<b><%= gettext "Inventory" %></b>
+				                </td>
+				                <td>
+				                	#
+				                </td>
+				            </tr>
+				            <tr>
+				            	<td>
+				                	<b><%= gettext "Code" %></b>
+				                </td>
+				                <td>
+				                	<%= product.code %>
+				                </td>
+				                <td>
+				                	<b><%= gettext "Provider" %></b>
+				                </td>
+				                <td>
+				                	<%= product.provider %>
+				                </td>
+				            </tr>
+				            <tr>
+				            	<td>
+				                	<b><%= gettext "Size" %></b>
+				                </td>
+				                <td>
+				                	<%= product.size %>
+				                </td>
+				                <td>
+				                	<b><%= gettext "Radius" %></b>
+				                </td>
+				                <td>
+				                	<%= product.radius %>
+				                </td>
+				            </tr>
+				            <tr>
+				            	<td>
+				                	<b><%= gettext "V Number" %></b>
+				                </td>
+				                <td>
+				                	<%= product.v_number %>
+				                </td>
+				                <td>
+				                	<b><%= gettext "Position" %></b>
+				                </td>
+				                <td>
+				                	<%= product.position %>
+				                </td>
+				            </tr>
+				        </table>
+				    </td>
+				</tr>
+				<% end %>
+	        </tbody>
+	    </table>
+	</div>
+</div>
+

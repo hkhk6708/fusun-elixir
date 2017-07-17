@@ -1,0 +1,5 @@
+/upload/images
+**/.DS_Store
+*~
+*.lock
+*.sql

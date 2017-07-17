@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Fusun</title>
+    <link rel="icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/backend.css") %>">
+    <!-- Google Font Open Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Share Script -->
+    <%= render Fusun.ShareView, "_share_script.html", conn: @conn %>
+    <!-- End javascript view group -->
+  </head>
+
+  <body class="dark-bg">
+    <div id="wrapper">
+      <!-- Left menu -->
+      <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+          <ul class="nav metismenu" id="side-menu">
+            <li>
+              <a href="<%= admin_dashboard_path(@conn, :index) %>"><i class="fa fa-area-chart"></i> <span class="nav-label"> <%= gettext("Dashboard") %></span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-circle-o"></i> <span class="nav-label"> <%= gettext("Tires") %></span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="<%= admin_product_path(@conn, :tires) %>"><i class="fa fa-bars"></i><%= gettext("Tire List") %></a></li>
+                    <!--li><a href="#"><i class="fa fa-plus"></i><%= gettext("Create New Project") %></a></li-->
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-times-circle-o"></i> <span class="nav-label"> <%= gettext("Wheels") %></span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="<%= admin_product_path(@conn, :wheels) %>"><i class="fa fa-bars"></i><%= gettext("Wheel List") %></a></li>
+                    <!--li><a href="#"><i class="fa fa-plus"></i><%= gettext("Create New Project") %></a></li-->
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-users"></i> <span class="nav-label"> <%= gettext("Users") %></span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="#"><i class="fa fa-bars"></i><%= gettext("User List") %></a></li>
+                    <li><a href="#"><i class="fa fa-plus"></i><%= gettext("Create New User") %></a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Left menu -->
+
+
+      <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!--#region NAVBAR ONE-->
+        <%= render Fusun.ShareView, "_navbar_fixed_top.html", conn: @conn %>
+        <!--#endregion NAVBAR ONE-->
+
+        <!--Content-->
+        <!--#region CONTENT-->
+        <%= if get_flash(@conn, :success) != nil do %>
+          <div class="alert alert-success">
+            <%= get_flash(@conn, :success) %>
+          </div>
+        <% end %>
+        <%= if get_flash(@conn, :error) != nil do %>
+          <div class="alert alert-danger">
+            <%= get_flash(@conn, :error) %>
+          </div>
+        <% end %>
+
+        <%= render @view_module, @view_template, assigns %>
+        <!--#end Content -->
+      </div>
+    </div>
+  </body>
+</html>
