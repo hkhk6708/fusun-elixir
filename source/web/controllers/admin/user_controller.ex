@@ -1,4 +1,4 @@
-defmodule Fusun.Admin.ProductController do
+defmodule Fusun.Admin.UserController do
   use Fusun.Web, :controller
   alias Fusun.Model.{User}
 
