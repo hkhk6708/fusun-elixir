@@ -8,20 +8,19 @@ defmodule Fusun.Admin.ProductController do
   # end
 
   def wheels(conn, _params) do
-  	list(conn, "wheel", gettext "Wheels")
+  	list(conn, "wheel")
   end
 
   def tires(conn, _params) do
-  	list(conn, "tire", gettext "Tries")
+  	list(conn, "tire")
   end
 
-  def list(conn, type, title) do
+  def list(conn, type) do
   	products = Product.get_products(type)
 
     render(conn, "list.html", 
       products: products,
-      type: type,
-      title: title
+      type: type
     )
   end
 
@@ -39,7 +38,6 @@ defmodule Fusun.Admin.ProductController do
   def management(conn, %{"id" => id}) do
     product = Product.get_product(id)
     inventory_changeset = ProductInventory.changeset(%ProductInventory{})
-    IO.inspect product
     render(conn, "management.html",
       product: product,
       inventory_changeset: inventory_changeset
@@ -47,7 +45,6 @@ defmodule Fusun.Admin.ProductController do
   end
 
   def update_inventory(conn, %{"id" => id, "product_inventory" => product_inventory_params}) do
-    IO.inspect product_inventory_params
     product = Product.get_product(id)
     inventory_changeset = ProductInventory.changeset(%ProductInventory{}, product_inventory_params)
     case Repo.insert(inventory_changeset) do

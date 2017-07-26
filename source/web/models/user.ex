@@ -24,6 +24,27 @@ defmodule Fusun.Model.User do
   @required_fields ~w()
   @optional_fields ~w()
 
+  @roles %{
+    admin: "admin",
+    user: "user",
+  }
+
+  @get_roles %{
+    admin: (gettext "Admin"),
+    user: (gettext "User")
+  }
+
+  def role_admin, do: Map.get(@roles, :admin)
+  def role_user, do: Map.get(@roles, :user)
+
+  def role_name(user) do
+    Map.get(@get_roles, String.to_atom(user.role))
+  end
+
+  def full_name(user) do
+    "#{user.firstname} #{user.lastname}"
+  end
+
   @doc """
   Creates a changeset based on the `model` and `params`.
 

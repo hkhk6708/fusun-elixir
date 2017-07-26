@@ -2,8 +2,8 @@
 <div class="row">
 	<div class="col-lg-12">
     	<div class="wrapper wrapper-content">
-    		<%= render Fusun.ShareView, "_product_table.html", conn: @conn, products: @tires, title: gettext "Tires"  %>
-    		<%= render Fusun.ShareView, "_product_table.html", conn: @conn, products: @wheels, title: gettext "Wheels" %>
+    		<%= render Fusun.ShareView, "_product_table.html", conn: @conn, products: @tires %>
+    		<%= render Fusun.ShareView, "_product_table.html", conn: @conn, products: @wheels %>
     	</div>
     </div>
 </div>

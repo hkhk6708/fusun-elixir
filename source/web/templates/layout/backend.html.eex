@@ -24,6 +24,8 @@
       <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
           <ul class="nav metismenu" id="side-menu">
+            <%= render Fusun.ShareView, "_profile_element.html", conn: @conn %>
+            
             <li>
               <a href="<%= admin_dashboard_path(@conn, :index) %>"><i class="fa fa-area-chart"></i> <span class="nav-label"> <%= gettext("Dashboard") %></span></a>
             </li>
